@@ -1,0 +1,151 @@
+/* HEADER Configuration */
+.top-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 10px 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.Header-logo {
+  height: 20vmin;
+  pointer-events: auto;
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .Header-logo {
+    height: 25vmin;
+  }
+}
+
+/* HAMBURGER Button */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 9px);
+}
+
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -9px);
+}
+
+/* MENU from Hamburger */
+.menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #282c34;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  padding-top: 100px;
+  z-index: 9;
+  font: 100% Arial, sans-serif;
+  font-weight: 700;
+}
+
+.menu.open {
+  display: flex;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin: 40px 0; /* Reduced margin to bring items closer together */
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* DESKTOP MENU */
+.desktop-menu {
+  display: none;
+}
+
+@media (min-width: 601px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .desktop-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 100px;
+  }
+
+  .desktop-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .desktop-menu ul li {
+    margin: 0 15px;
+  }
+
+  .desktop-menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .menu {
+    width: 90%;
+  }
+}
