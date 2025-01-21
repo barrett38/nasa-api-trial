@@ -29,18 +29,18 @@ export default function Header() {
       <nav className={`menu ${menuOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="#about">ABOUT ME</a>
-          </li>
-          <li>
-            <a href="#whatIDo">WHAT I DO</a>
-          </li>
-          <li>
-            <a href="#leadership">LEADERSHIP & MANAGEMENT</a>
-          </li>
-          <li>
             <a href="#contact" onClick={handleDownload}>
               DOWNLOAD IMAGE
             </a>
+          </li>
+          <li>
+            <a href="#about">SPACE HOLDER</a>
+          </li>
+          <li>
+            <a href="#whatIDo">SPACE HOLDER</a>
+          </li>
+          <li>
+            <a href="#leadership">SPACE HOLDER</a>
           </li>
         </ul>
       </nav>
